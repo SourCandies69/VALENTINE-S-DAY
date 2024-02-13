@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Valentine's Day</title>
+<title>UntoldCoding</title>
 <style>
   * {
     margin: 0;
@@ -14,7 +14,7 @@
   #home {
     width: 100%;
     height: 100vh;
-    background-image: url(https://i.postimg.cc/c4kmCsF1/people-2597454-640.jpg);
+    background-image: url("vl-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -24,17 +24,10 @@
     justify-content: center;
     align-items: center;
     background-attachment: fixed;
-
-    animation-name: bg-change;
-    animation-duration: 15s;
-    animation-timing-function: linear;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-
     overflow: hidden;
   }
 
-  @keyframes bg-change {
+  /* @keyframes bg-change {
     from {
       background-image: url(https://i.postimg.cc/mDfh5hKD/couple-silhouette-sunset-scenery-digital-art-4k-wallpaper-uhdpaper-com-777-0-i.jpg);
     }
@@ -42,7 +35,7 @@
     to {
       background-image: url(https://i.postimg.cc/8PLvQNxn/couple-silhouette-sunset-digital-art-4k-wallpaper-uhdpaper-com-222-0-g.jpg);
     }
-  }
+  } */
 
   .home_section {
     width: 100%;
@@ -54,20 +47,17 @@
   }
 
   #container {
-    width: 60vw;
-    aspect-ratio: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 600px;
+    height: 600px;
+    position: relative;
     animation: Beat 2s ease infinite alternate;
-
-    position: absolute;
-    left: 20%;
-    top: -10%;
   }
 
   #container a {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-decoration: none;
     color: white;
     text-align: center;
@@ -100,15 +90,15 @@
 
   @keyframes Beat {
     0% {
-      transform: scale(120%);
+      transform: scale(1);
       filter: drop-shadow(10px 10px 6px #f00606);
     }
     40% {
-      transform: scale(100%);
+      transform: scale(1.2);
       filter: drop-shadow(10px 10px 60px #f00606);
     }
     100% {
-      transform: scale(120%);
+      transform: scale(1);
       filter: drop-shadow(10px 10px 90px #f00606);
     }
   }
@@ -144,6 +134,8 @@
     cursor: pointer;
     position: absolute;
     bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   h1 span {
