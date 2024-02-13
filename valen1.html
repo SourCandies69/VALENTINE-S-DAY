@@ -11,31 +11,30 @@
     box-sizing: border-box;
   }
 
+  body {
+    width: 720px;
+    height: 1280px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   #home {
     width: 700px;
-    height: 100vh;
+    height: 100%;
     background-image: url("vl-bg.jpg");
     background-repeat: no-repeat;
-    background-size: 720px 1280px;
+    background-size: cover;
     background-position: center;
     background-color: rgba(255, 255, 255, 0.16);
     background-blend-mode: overlay;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-attachment: fixed;
-    overflow: hidden; /* Set overflow to hidden */
+    position: relative;
   }
-
-  /* @keyframes bg-change {
-    from {
-      background-image: url(https://i.postimg.cc/mDfh5hKD/couple-silhouette-sunset-scenery-digital-art-4k-wallpaper-uhdpaper-com-777-0-i.jpg);
-    }
-
-    to {
-      background-image: url(https://i.postimg.cc/8PLvQNxn/couple-silhouette-sunset-digital-art-4k-wallpaper-uhdpaper-com-222-0-g.jpg);
-    }
-  } */
 
   .home_section {
     width: 600px;
@@ -53,11 +52,10 @@
     align-items: center;
     justify-content: center;
     animation: Beat 2s ease infinite alternate;
-
     position: absolute;
-    left: 50%; /* Center horizontally */
-    top: 50%; /* Center vertically */
-    transform: translate(-50%, -50%); /* Center the container */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   #container a {
