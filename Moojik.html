@@ -127,7 +127,7 @@
 <div class="button-grid" id="buttonGrid">
 </div>
 
-<button class="come-here-button" onclick="proceedToNextPage()">Come Here</button>
+<button class="come-here-button" onclick="proceedToNextPage()">Hug ME🫂</button>
 
 <script>
 // Define music files and their respective images
@@ -186,6 +186,13 @@ let currentAudio = null;
 
 // Shuffle music files' positions
 const shuffledMusicFiles = shuffleObjectKeys(musicFiles);
+
+// Preload all audio files
+for (const {file} of Object.values(shuffledMusicFiles)) {
+    const audio = new Audio();
+    audio.src = file;
+    audio.preload = 'auto';
+}
 
 // Populate buttons with shuffled music files
 const buttonGrid = document.getElementById('buttonGrid');
